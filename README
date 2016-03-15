@@ -1,0 +1,74 @@
+README file for LSKM.R
+
+#-----------------------------------------------------------------
+# License
+#-----------------------------------------------------------------
+LSKM.R is a free software package; you can redistribute it and/or
+modify it under the terms of the GNU General Public License version 2.
+This software package is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+Public License for more details.
+
+#-----------------------------------------------------------------
+# Citing this work
+#-----------------------------------------------------------------
+If you publish results using the methods implemented in LSKM.R, we
+request that you reference the following paper in your manuscript:
+Kwee et al. (2007) A Powerful and Flexible Multilocus Association Test
+for Quantitative Traits. American Journal of Human Genetics 82:386-397
+
+Multilocus Association Test for Quantiative Traits
+
+LSKM.R is used for multilocus association testing of quantitative
+traits. The method behind LSKM.R is based on least-squares kernel
+machines and is described in Kwee et al., AJHG 82:386-397, 2008. 
+
+
+#-----------------------------------------------------------------
+# Input files (examples provided in download):
+#-----------------------------------------------------------------
+
+Important: All input files must be ASCII space-delimited.
+The filenames given here are the defaults expected by the program;
+they may be changed in the first few lines of the LSKM.R code. 
+
+A) trait.dat:
+
+    * One row for each individual plus a header row with trait label
+
+    * One column containing quantitative trait values
+
+
+B) genotype.dat:
+
+    * One row for each individual plus a header row with genotype labels
+
+    * One column for each SNP genotype listed in header row
+
+    * Each genotype coded as number of copies of reference allele at SNP (0,1,2)
+
+    * No missing values allowed
+  
+
+C) covariate.dat (not necessary if no environmental covariates exist):  
+
+   * One row for each individual plus a header row with covariate labels
+
+   * One column for each covariate listed in header row
+
+     * Covariates can be categorical or continuous
+
+     * No missing values allowed
+
+
+IMPORTANT: The row ordering of subjects must be consistent among
+trait.txt, genotype.txt, and covariate.txt. In other words, if the
+trait outcome for subject i is in row k of trait.txt, then the
+genotype data for subject i must be found in row k of genotype.txt. 
+
+
+#-----------------------------------------------------------------
+# Output file:
+#-----------------------------------------------------------------
+LSKM.out 
